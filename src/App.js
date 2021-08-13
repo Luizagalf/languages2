@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import {Row, Col} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import './App.css';
+import Words from './components/Words';
+const jsonWords = require("./jsonWords.js");
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Row xs={1} md={3} className="g-4 justify-content-md-center">
+      {
+        jsonWords.map((word) =>
+        <Col className="d-flex p-2">
+          <Words name={word.name} url={word.url} transcription={word.transcription} translation={word.translation} theme={word.theme}></Words>
+        </Col>
+        )
+      }
+    </Row>
   );
 }
 
