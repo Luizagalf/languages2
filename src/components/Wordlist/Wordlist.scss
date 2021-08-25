@@ -1,0 +1,13 @@
+@import "../../general.scss";
+
+.button {
+    width: 200px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.button__success {
+    background: $whitecolor;
+    color: white;
+}

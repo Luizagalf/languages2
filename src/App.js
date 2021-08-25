@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import './App.css';
 import Header from './components/Header/Header';
 import Wordlist from './components/Wordlist/Wordlist';
 import Wordcards from './components/Wordcards/Wordcards';
